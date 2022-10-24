@@ -1,11 +1,7 @@
-const router = require('express').Router();
-const UserController = require('../controllers/user.controller');
+const router = require("express").Router();
+const UserController = require("../controllers/user.controller");
 
+router.post("/signup", [], UserController.signUp);
+router.get("/confirm/:token", [], UserController.confirm);
 
-router.post(
-    '/signup',
-    [],
-    UserController.signUp
-);
-
-module.exports = router
+module.exports = router;

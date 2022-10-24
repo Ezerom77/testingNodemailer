@@ -14,14 +14,16 @@ const getTokenData = (token) => {
   let data = null;
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
-      console.log("Error verifying token: " + JSON.stringify(err));
+      console.log("Error al obtener data del token");
     } else {
       data = decoded;
     }
   });
+
   return data;
 };
+
 module.exports = {
   getToken,
-  getTokenData
-}
+  getTokenData,
+};

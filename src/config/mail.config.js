@@ -25,11 +25,10 @@ const sendEmail = async (email, subject, html) => {
 const getTemplate = (name, token) => {
   return `
   <head>
-    <link rel="stylesheet" href="./style.css">
 </head>
 
 <div id="email___content">
-    <img src="https://i.imgur.com/eboNR82.png" alt="">
+<img style="width:150px ;" src="https://m200la.com/wp-content/uploads/2021/02/M200-768x412.png" alt="">
     <h2>Hola ${name}</h2>
     <p>Para confirmar tu cuenta, ingresa al siguiente enlace</p>
     <a
